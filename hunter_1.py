@@ -12,6 +12,6 @@ def unique(arr,count):
         print("Unique")
 
 size=int(input())
-arr=list(map(int,input()))
+arr=list(map(int,input().split()))
 count=len(arr)
 unique(arr,count)
