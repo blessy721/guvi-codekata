@@ -10,8 +10,8 @@ def process(str):
             if (len(stack)>0) and (open[loc]==(stack[len(stack)-1])):
                 stack.pop()
             else:
-                return("Not balanced!")
+                print("Not balanced!")
     if len(stack)==0:
-        return("Balanced!")
-str=str(input("Enter a expression to evaluate : "))
+        print("Balanced!")
+str=str(input("Enter an expression to evaluate : "))
 process(str)
