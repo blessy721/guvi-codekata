@@ -8,5 +8,7 @@ if first[0]==second[0] and second[0]==third[0]:
     print("yes")
 elif first[1]==second[1] and second[1]==third[1]:
     print("yes")
+elif first[0]==first[1] and second[0]==second[1] and third[0]==third[1]:
+    print("yes")
 else:
     print("no")
