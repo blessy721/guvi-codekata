@@ -4,8 +4,10 @@ def unique_num(count,arr):
         for j in range(i+1,count):
             if arr[i]== arr[j]:
                 stack.append(arr[i])
-
-    print(stack[0])
+    if len(stack)>0:
+        print(stack[0])
+    else:
+        print("unique")
 
 size=int(input())
 arr=list(map(int,input().split()))
