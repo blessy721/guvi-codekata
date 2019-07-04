@@ -1,26 +1,24 @@
 
-def com_pre_1(s1,s2):
-    n1=len(s1)
-    n2=len(s2)
-    result=""
-    i=0
-    j=0
-    while i<=n1-1 and j<=n2-1:
-        if s1[i]!=s2[j]:
-            break
-        result+=s1[i]
-        i+=1
-        j+=1
-    return result
+def com_pre_1(n,arr):
+    minlen=com_pre(n,arr)
+    res=""
+    for i in range(minlen):
+        curr=arr[0][i]
+        for j in range(1,n):
+            if arr[j][i]!=curr:
+                return res
+        res += curr
+    return res
 def com_pre(n,arr):
-    pref=arr[0]
+    pref=len(arr[0])
     for i in range(1,n):
-        prefix=com_pre_1(pref,arr[i])
-    return prefix
+        if (len(arr[i]) < pref):
+            pref=len(arr[i])
+    return pref
 
 n=int(input())
 arr=[]
 for i in range(n):
     arr.append(input())
-ans=com_pre(n,arr)
+ans=com_pre_1(n,arr)
 print(ans)
