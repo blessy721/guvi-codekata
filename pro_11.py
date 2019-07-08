@@ -1,2 +1,5 @@
 x=int(input())
-print(int((x//2)*(x-1)))
+if x%2==0:
+    print(x*(x//2)-(x//2))
+else:
+    print(x*(x//2))
